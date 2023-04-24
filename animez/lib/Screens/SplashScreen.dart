@@ -18,7 +18,7 @@ Future<void> playSound() async {
 }
   @override
   void dispose() {
-   player.dispose();
+player.stop();
    super.dispose();
   }
 
