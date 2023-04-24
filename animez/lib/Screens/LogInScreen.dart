@@ -6,13 +6,12 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
      final screenHeight = MediaQuery.of(context).size.height;
-    final screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
@@ -21,7 +20,7 @@ class _LoginScreenState extends State<LoginScreen> {
 Text('LOG IN !',style: TextStyle(fontSize:screenHeight*0.05,fontWeight: FontWeight.bold),),
     
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30),
+            padding: const EdgeInsets.symmetric(horizontal: 30),
             child: TextFormField(
               controller: _emailController,
               decoration: InputDecoration(
@@ -32,9 +31,9 @@ Text('LOG IN !',style: TextStyle(fontSize:screenHeight*0.05,fontWeight: FontWeig
               ),
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30),
+            padding: const EdgeInsets.symmetric(horizontal: 30),
             child: TextFormField(
               controller: _passwordController,
               obscureText: true,
@@ -46,7 +45,7 @@ Text('LOG IN !',style: TextStyle(fontSize:screenHeight*0.05,fontWeight: FontWeig
               ),
             ),
           ),
-          SizedBox(height: 50),
+          const SizedBox(height: 50),
           GestureDetector(
             onTap: () {
               // Perform sign-in action
@@ -59,7 +58,7 @@ Text('LOG IN !',style: TextStyle(fontSize:screenHeight*0.05,fontWeight: FontWeig
               height: 50,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25),
-                color: Color.fromARGB(255, 243, 107, 33),
+                color: const Color.fromARGB(255, 243, 107, 33),
               ),
               child: const Center(
                 child: Text(
@@ -72,8 +71,7 @@ Text('LOG IN !',style: TextStyle(fontSize:screenHeight*0.05,fontWeight: FontWeig
               ),
             ),
               
-          ),
-        
+          ),       
          
         ],
       ),

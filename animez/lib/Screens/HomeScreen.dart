@@ -25,7 +25,7 @@ class HomeScreenState extends State<HomeScreen> {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-     backgroundColor:  Color.fromARGB(255, 22, 22, 23),
+     backgroundColor:  const Color.fromARGB(255, 22, 22, 23),
       body: SingleChildScrollView(
         child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -33,10 +33,10 @@ class HomeScreenState extends State<HomeScreen> {
           SizedBox(
             height: 80,
 child: Container(
-            margin: EdgeInsets.only(top: 30, left: 20, right: 20),
+            margin: const EdgeInsets.only(top: 30, left: 20, right: 20),
             child: TextField(
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.search),
+                prefixIcon:const  Icon(Icons.search),
                 hintText: 'Search...',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20),
@@ -53,7 +53,7 @@ child: Container(
           ),
           
           Container(
-            margin: EdgeInsets.only(top: 20, left: 5),
+            margin: const EdgeInsets.only(top: 20, left: 5),
             alignment: Alignment.topLeft,
             child: const Text(
               "Best Of This Week",
@@ -63,7 +63,7 @@ child: Container(
           const SizedBox(
             height: 5,
           ),
-   Container(
+   SizedBox(
   height: screenHeight * 0.35,
   width: screenWidth * 0.95,
  
@@ -76,7 +76,7 @@ child: Container(
           itemCount: snapshot.data![0].length,
           itemBuilder: (context, index) {
             return Padding(
-              padding: EdgeInsets.all(3),
+              padding:const  EdgeInsets.all(3),
               child: Container(
                 height: screenHeight * 0.35,
                 width: screenWidth * 0.5,
@@ -104,7 +104,7 @@ child: Container(
                     fit: BoxFit.fill,
                   )),
 
-                  SizedBox(height:5),
+               const  SizedBox(height:5),
                   Text(snapshot.data![0][index].title, style: const TextStyle(fontSize:15,fontWeight: FontWeight.bold,color: Colors.white),overflow:TextOverflow.ellipsis,)
                     ],
                   ) 
@@ -120,7 +120,7 @@ child: Container(
   ),
 ),
   Container(
-            margin: EdgeInsets.only(top: 20, left: 5),
+            margin:const  EdgeInsets.only(top: 20, left: 5),
             alignment: Alignment.topLeft,
             child: const Text(
               "Most Popular",
@@ -140,7 +140,7 @@ child: Container(
           itemCount: snapshot.data![0].length,
           itemBuilder: (context, index) {
             return Padding(
-              padding: EdgeInsets.all(3),
+              padding:const  EdgeInsets.all(3),
               child: Container(
                 height: screenHeight * 0.35,
                 width: screenWidth * 0.5,
@@ -161,8 +161,8 @@ Image.network( snapshot.data![1][index].imgUrl,
                     width: double.infinity,
                     fit: BoxFit.fill,
                   ),
-                  SizedBox(height:5),
-                  Text(snapshot.data![1][index].title, style: TextStyle(fontSize:15,fontWeight: FontWeight.bold,color: Colors.white),overflow:TextOverflow.ellipsis,)
+              const    SizedBox(height:5),
+                  Text(snapshot.data![1][index].title, style:const TextStyle(fontSize:15,fontWeight: FontWeight.bold,color: Colors.white),overflow:TextOverflow.ellipsis,)
                     ],
                   ) 
                 ),)
@@ -178,7 +178,7 @@ Image.network( snapshot.data![1][index].imgUrl,
   ),
 ),
      Container(
-            margin: EdgeInsets.only(top: 20, left: 5),
+            margin: const EdgeInsets.only(top: 20, left: 5),
             alignment: Alignment.topLeft,
             child: const Text(
               "Most Viewed of All Time",
@@ -188,7 +188,7 @@ Image.network( snapshot.data![1][index].imgUrl,
           const SizedBox(
             height: 5,
           ),
-             Container(
+             SizedBox(
   height: screenHeight * 0.35,
   width: screenWidth * 0.95,
  
@@ -201,7 +201,7 @@ Image.network( snapshot.data![1][index].imgUrl,
           itemCount: snapshot.data![2].length,
           itemBuilder: (context, index) {
             return Padding(
-              padding: EdgeInsets.all(3),
+              padding:const EdgeInsets.all(3),
               child: Container(
                 height: screenHeight * 0.35,
                 width: screenWidth * 0.5,
@@ -222,8 +222,8 @@ Image.network(    snapshot.data![2][index].imgUrl,
                     width: double.infinity,
                     fit: BoxFit.fill,
                   ),
-                  SizedBox(height:5),
-                  Text(snapshot.data![1][index].title, style: TextStyle(fontSize:15,fontWeight: FontWeight.bold,color: Colors.white),overflow:TextOverflow.ellipsis,)
+              const    SizedBox(height:5),
+                  Text(snapshot.data![1][index].title, style: const TextStyle(fontSize:15,fontWeight: FontWeight.bold,color: Colors.white),overflow:TextOverflow.ellipsis,)
                     ],
                   ) 
                 ),)

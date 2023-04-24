@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
@@ -19,7 +18,7 @@ Future<void> playSound() async {
 }
   @override
   void dispose() {
-   player.stop();
+   player.dispose();
    super.dispose();
   }
 

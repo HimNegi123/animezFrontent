@@ -2,9 +2,7 @@ import 'package:animez/Models/AnimeScreenModel.dart';
 import 'package:animez/RestApi/ApiDataCalling.dart';
 import 'package:animez/Screens/VideoScreen.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
 class AnimeScreen extends StatefulWidget{
   
@@ -67,13 +65,13 @@ width: MediaQuery.of(context).size.width,
 Positioned(
   left: screenWidth * 0.4,
   top: screenHeight * 0.1,
-  child: Container(
+  child: SizedBox(
     width: screenWidth * 0.6,
     height: screenHeight * 0.1,
     child: AutoSizeText(
   
       snapshot.data!.getTitle,
-      style: TextStyle(
+      style: const TextStyle(
         color: Color.fromARGB(255, 255, 255, 255),
         fontSize: 30,
         fontWeight: FontWeight.bold,
@@ -95,7 +93,7 @@ Positioned(
     height: screenHeight * 0.1,
     child: AutoSizeText(
       snapshot.data!.getdiffName,
-      style: TextStyle(
+      style:const TextStyle(
         color: Color.fromARGB(255, 255, 255, 255),
         fontSize: 25,
         fontWeight: FontWeight.bold,
@@ -111,7 +109,7 @@ Positioned(
   top: screenHeight * 0.16,
   child: AutoSizeText(
     snapshot.data!.getType,
-    style: TextStyle(
+    style: const TextStyle(
       color: Color.fromARGB(255, 255, 255, 255),
       fontSize: 20,
       fontWeight: FontWeight.bold,
@@ -137,7 +135,7 @@ Positioned(
       ),
       boxShadow: [
         BoxShadow(
-          color: Color.fromARGB(255, 213, 206, 206).withOpacity(0.5),
+          color: const Color.fromARGB(255, 213, 206, 206).withOpacity(0.5),
           blurRadius: 10,
           spreadRadius: 2,
         ),
@@ -182,7 +180,7 @@ Positioned(
       ),
       boxShadow: [
         BoxShadow(
-          color: Color.fromARGB(255, 213, 206, 206).withOpacity(0.5),
+          color: const Color.fromARGB(255, 213, 206, 206).withOpacity(0.5),
           blurRadius: 10,
           spreadRadius: 2,
         ),
@@ -210,13 +208,13 @@ Positioned(
     ),
   ),
 ),
-Positioned(left:screenWidth*0.05,top:screenHeight*0.43,child: Text("Plot Summary:",style:TextStyle(fontSize:30,color: Color.fromARGB(255, 234, 140, 140),fontWeight: FontWeight.bold))), 
+Positioned(left:screenWidth*0.05,top:screenHeight*0.43,child:const Text("Plot Summary:",style:TextStyle(fontSize:30,color: Color.fromARGB(255, 234, 140, 140),fontWeight: FontWeight.bold))), 
         ]
       ),
       ),
     const  SizedBox(height:5  ),
     Container(
-      margin:EdgeInsets.only(left:4),
+      margin:const EdgeInsets.only(left:4),
       child:Expanded(child:  Text(snapshot.data!.plotSummary!=""?snapshot.data!.plotSummary: 'No data',style:const TextStyle(fontSize:20,color: Colors.white,fontWeight: FontWeight.bold))),
     )
 
@@ -231,8 +229,6 @@ Positioned(left:screenWidth*0.05,top:screenHeight*0.43,child: Text("Plot Summary
       }
       
       ), ));
-
-      
-      
+     
   }
 }

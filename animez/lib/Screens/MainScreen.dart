@@ -42,7 +42,7 @@ class MainScreenState extends State<MainScreen> {
             selectPage = value;
           });
         },
-        selectedItemColor: Color.fromARGB(255, 164, 69, 69),
+        selectedItemColor: const Color.fromARGB(255, 164, 69, 69),
         selectedFontSize: 20,
         unselectedFontSize: 14,
       ),

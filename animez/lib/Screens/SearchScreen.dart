@@ -53,7 +53,7 @@ class SearchScreenState extends State<SearchScreen> {
                     Container(
                       height: screenHeight * 0.88,
                       width: double.infinity,
-                      decoration: BoxDecoration(
+                      decoration:const BoxDecoration(
                           color: const Color.fromARGB(255, 22, 22, 23)),
                       child: ListView.builder(
                         itemCount: snapshot.data!.length,
@@ -64,11 +64,11 @@ class SearchScreenState extends State<SearchScreen> {
                           Navigator.push(context,MaterialPageRoute(builder: (context)=>AnimeScreen(data: data)));
                           },child:   Card(
                           
-                            color: Color.fromARGB(255, 10, 10, 10),
+                            color:const Color.fromARGB(255, 10, 10, 10),
   child: Row(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      Container(
+      SizedBox(
         height: screenHeight*0.2, // set the height to your desired value
         width: screenWidth*0.4, // set the width to your desired value
         child: Image.network(
@@ -84,16 +84,16 @@ class SearchScreenState extends State<SearchScreen> {
             children: [
               Text(
                 "${index+1}.",
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                    color: Color.fromARGB(255, 235, 230, 230),
                 ),
               ),
-              SizedBox(height: 8),
+            const  SizedBox(height: 8),
               Text(
                 snapshot.data![index].title,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 20,
                   color: Color.fromARGB(255, 235, 230, 230),overflow:TextOverflow.ellipsis
                 ),
@@ -145,13 +145,13 @@ class SearchScreenState extends State<SearchScreen> {
                           width: double.infinity,
                           color: Colors.blueGrey[700],
                         ),
-                        SizedBox(height: 8),
+                        const SizedBox(height: 8),
                         Container(
                           height: 20,
                           width: double.infinity,
                           color: Colors.blueGrey[800],
                         ),
-                        SizedBox(height: 8),
+                        const SizedBox(height: 8),
                         Container(
                           height: 20,
                           width: double.infinity,

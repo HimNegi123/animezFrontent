@@ -1,13 +1,9 @@
-
 import 'package:android_intent/android_intent.dart';
 import 'package:animez/Models/AnimeScreenModel.dart';
-import 'package:animez/Models/WatchAnimeUrlModel.dart';
 import 'package:animez/RestApi/ApiDataCalling.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class VideoScreen extends StatefulWidget {
@@ -55,10 +51,10 @@ VideoScreenState(this.value,this.name);
         );
       } else {
         return Shimmer.fromColors(
-          baseColor:const Color.fromARGB(255, 92, 89, 89)!,
-          highlightColor: const Color.fromARGB(255, 106, 101, 101)!,
+          baseColor:const Color.fromARGB(255, 92, 89, 89),
+          highlightColor: const Color.fromARGB(255, 106, 101, 101),
           child: Container(
-            color: Color.fromARGB(255, 103, 99, 99),
+            color: const Color.fromARGB(255, 103, 99, 99),
           ),
         );
       }

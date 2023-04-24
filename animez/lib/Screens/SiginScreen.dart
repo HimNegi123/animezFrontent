@@ -12,14 +12,14 @@ class SignInScreen extends StatefulWidget {
 class _SignInScreenState extends State<SignInScreen> with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation<double> _animation;
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
- TextEditingController _nameController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+ final TextEditingController _nameController = TextEditingController();
 void initState() {
   super.initState();
   _animationController = AnimationController(
     vsync: this,
-    duration: Duration(milliseconds: 100),
+    duration:const Duration(milliseconds: 100),
   );
 }
 
@@ -54,9 +54,9 @@ Text('HEY THERE !',style: TextStyle(fontSize:screenHeight*0.05,fontWeight: FontW
               ),
             ),
           ),
-          SizedBox(height: 25),
+    const  SizedBox(height: 25),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30),
+            padding: const EdgeInsets.symmetric(horizontal: 30),
             child: TextFormField(
               controller: _emailController,
               decoration: InputDecoration(
@@ -67,9 +67,9 @@ Text('HEY THERE !',style: TextStyle(fontSize:screenHeight*0.05,fontWeight: FontW
               ),
             ),
           ),
-          SizedBox(height: 20),
+   const   SizedBox(height: 20),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30),
+            padding: const EdgeInsets.symmetric(horizontal: 30),
             child: TextFormField(
               controller: _passwordController,
               obscureText: true,
@@ -96,7 +96,7 @@ Text('HEY THERE !',style: TextStyle(fontSize:screenHeight*0.05,fontWeight: FontW
               height: 50,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25),
-                color: Color.fromARGB(255, 243, 107, 33),
+                color: const Color.fromARGB(255, 243, 107, 33),
               ),
               child: const Center(
                 child: Text(
@@ -111,13 +111,11 @@ Text('HEY THERE !',style: TextStyle(fontSize:screenHeight*0.05,fontWeight: FontW
               
           ),
           const SizedBox(height: 10),
-           Text('OR',style: TextStyle(fontSize:30),),
+           const Text('OR',style: TextStyle(fontSize:30),),
           GestureDetector(
             onTap: () => Navigator.push(context,MaterialPageRoute(builder: (context)=>LoginScreen())),
             child: const Text('Log In',style: TextStyle(fontSize: 20,color: Colors.blue),),
-          )
-        
-         
+          )     
         ],
       ),
     );

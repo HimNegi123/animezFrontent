@@ -8,7 +8,7 @@ class FavouriteScreen extends StatefulWidget{
 class FavouriteScreenState extends State<FavouriteScreen>{
   @override
   Widget build(BuildContext context) {
-   return Center(
+   return const  Center(
     child: Text("Favourite Page",style: TextStyle(fontSize: 40),),
    );
   }
